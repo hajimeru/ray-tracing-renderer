@@ -29,5 +29,8 @@
     <ClInclude Include="Vector3.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Ray3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
