@@ -1,8 +1,9 @@
 #ifndef _INTERSECT_RESULT_H_
 #define _INTERSECT_RESULT_H_
 
-#include "Geometry.h"
 #include "Vector3.h"
+class Geometry;
+
 class IntersectResult {
 public:
 	IntersectResult()
@@ -20,7 +21,7 @@ public:
 	{ }
 
 	static const IntersectResult noHit;
-
+	
 	const Geometry* getGeometry() const { return geometry_; }
 
 	void setGeometry(const Geometry* geometry) { geometry_ = geometry; }
@@ -37,7 +38,7 @@ public:
 
 	void setNormal(const Vector3& normal) { normal_ = normal; }
 
-	friend std::ostream& operator<< (std::ostream& os, const IntersectResult& instersect);
+	friend std::ostream& operator<< (std::ostream& os, const IntersectResult& intersect);
 
 private:
 	const Geometry* geometry_;
@@ -48,9 +49,16 @@ private:
 
 const IntersectResult IntersectResult::noHit = IntersectResult();
 
-std::ostream& operator<< (std::ostream& os, const IntersectResult& instersect) {
+std::ostream & operator<<(std::ostream & os, const IntersectResult & intersect)
+{
+	os << "[IntersectResult]" << "\n"
+		<< "[geometry] " << intersect.geometry_ << "\n"
+		<< "[distance] " << intersect.distance_ << "\n"
+		<< "[position] " << intersect.position_ << "\n"
+		<< "[normal] " << intersect.normal_ << "\n"
+		<< "\n";
 
+	return os;
 }
-
 #endif // !_INTERSECT_RESULT_H_
 

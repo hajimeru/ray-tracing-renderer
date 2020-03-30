@@ -2,7 +2,6 @@
 #define _SPHERE_H_
 #include "Geometry.h"
 
-
 class Sphere : public Geometry{
 public:
 	Sphere(const Vector3 center, double radius) :
@@ -27,14 +26,14 @@ public:
 		
 		double eps = 1e-6;
 		double distance = 0;
-		double sqrDelta = sqrt(delta);
-		if (-b - sqrDelta > eps)  distance = -b - sqrDelta;
-		else if (-b + sqrDelta > eps) distance = -b + sqrDelta;
-		else return IntersectResult::noHit;
+		double sqrtDelta = sqrt(delta);
+		if (-b - sqrtDelta > eps)  distance = -b - sqrtDelta;
+		else if (-b + sqrtDelta > eps) distance = -b + sqrtDelta;
+		else return IntersectResult::noHit;//(t>0)
 
 		Vector3 position = ray.getPoint(distance);
 		Vector3 normal = (position - center_).Normalize();
-		return 
+		return IntersectResult(this, distance, position, normal);
 	}
 	
 private:

@@ -1,8 +1,9 @@
 #ifndef _VECTOR3_H_
 #define _VECTOR3_H_
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
+
 class Vector3 {
 public:
 	Vector3() :x_(0), y_(0), z_(0) {}
@@ -111,7 +112,7 @@ Vector3 Vector3::Zaxis = Vector3(0, 0, 1);
 
 
 std::ostream& operator<<(std::ostream& os, const Vector3& rhs) {
-	 os << "[x,y,z]:" << rhs.x_ << " " << rhs.y_ << " " << rhs.z_ << "\n";
+	 os << "[x,y,z]:" << rhs.x_ << " " << rhs.y_ << " " << rhs.z_ ;
 	 return os;
 }
 #endif
