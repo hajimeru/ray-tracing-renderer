@@ -50,5 +50,8 @@
     <ClInclude Include="PerspectiveCamera.h">
       <Filter>render</Filter>
     </ClInclude>
+    <ClInclude Include="MyConst.h">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
