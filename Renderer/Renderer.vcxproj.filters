@@ -32,5 +32,14 @@
     <ClInclude Include="Ray3.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="IntersectResult.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

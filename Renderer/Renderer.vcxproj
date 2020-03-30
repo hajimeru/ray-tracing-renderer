@@ -155,7 +155,10 @@
     <ClCompile Include="tgaimage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="IntersectResult.h" />
     <ClInclude Include="Ray3.h" />
+    <ClInclude Include="Sphere.h" />
     <ClInclude Include="tgaimage.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
