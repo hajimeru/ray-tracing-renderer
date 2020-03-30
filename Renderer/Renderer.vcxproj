@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="IntersectResult.h" />
+    <ClInclude Include="PerspectiveCamera.h" />
     <ClInclude Include="Ray3.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="tgaimage.h" />
