@@ -53,5 +53,20 @@
     <ClInclude Include="MyConst.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMath.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckerMaterial.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="PhongMaterial.h">
+      <Filter>render</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
