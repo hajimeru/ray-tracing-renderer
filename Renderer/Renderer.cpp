@@ -58,7 +58,6 @@ void RenderDepthTest() {
 		}
 	}
 
-
 	image.flip_vertically();
 	image.write_tga_file(IMAGE_URL);
 }
