@@ -1,10 +1,12 @@
 #ifndef _SPHERE_H_
 #define _SPHERE_H_
+
 #include "Geometry.h"
 #include "PhongMaterial.h"
+
 class Sphere : public Geometry{
 public:
-	Sphere(const Vector3 center, double radius, const std::shared_ptr<Material> material = nullptr)
+	Sphere(const Vector3 center, double radius, const std::shared_ptr<Material>& material = nullptr)
 		:Geometry(material),
 		center_(center),
 		radius_(radius),
