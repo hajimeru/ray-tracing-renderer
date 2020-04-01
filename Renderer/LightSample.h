@@ -13,6 +13,10 @@ public:
 
 	const Vector3& L() { return l_; }
 	const Color& EL() { return el_; }
+
+	friend bool operator!=(const LightSample& lhs, const LightSample& rhs) {
+		return !((lhs.l_ == rhs.l_) && (lhs.el_ == rhs.el_));
+	}
 private:
 	Vector3 l_;
 	Color el_;

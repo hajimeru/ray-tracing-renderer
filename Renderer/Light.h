@@ -11,7 +11,7 @@ using std::shared_ptr;
 
 class Light {
 public:
-	virtual LightSample Sample(const shared_ptr<Geometry>& scene, const Vector3& position) = 0;
+	virtual LightSample Sample(const shared_ptr<Geometry>& scene, const Vector3& position) const = 0;
 };
 #endif // !_LIGHT_H_
 

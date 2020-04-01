@@ -7,8 +7,8 @@ class Plane : public Geometry{
 public:
 	Plane(const Vector3& normal, double distance,const std::shared_ptr<Material>& material = nullptr)
 		: Geometry(material),
-		normal_(normal),
-		position_(distance * normal)
+		normal_(normal.Normalize()),
+		position_(distance * normal.Normalize())
 	{ }
 
 	

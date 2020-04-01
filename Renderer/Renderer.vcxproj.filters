@@ -89,5 +89,11 @@
     <ClInclude Include="LightSample.h">
       <Filter>render</Filter>
     </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="LightTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

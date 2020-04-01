@@ -157,9 +157,11 @@
   <ItemGroup>
     <ClInclude Include="CheckerMaterial.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="DirectionalLight.h" />
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="LightSample.h" />
+    <ClInclude Include="LightTest.h" />
     <ClInclude Include="Local_illumination.h" />
     <ClInclude Include="IntersectResult.h" />
     <ClInclude Include="Material.h" />

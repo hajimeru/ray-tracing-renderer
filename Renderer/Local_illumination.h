@@ -162,8 +162,6 @@ void RayTraceReflection() {
 
 	shared_ptr<Geometry> scene = make_shared<UnionGeometry>(vector<shared_ptr<Geometry>>({ plane1, sphere1, sphere2 }));
 
-	double Maxdepth = 5.0;
-
 	for (int x = 0; x < WIDTH; ++x) {
 		double sx = x / (double)WIDTH;
 		for (int y = 0; y < HEIGHT; ++y) {

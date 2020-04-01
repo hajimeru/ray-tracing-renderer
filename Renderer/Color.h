@@ -53,7 +53,11 @@ public:
 		return rhs * value;
 	}
 
-	friend std::ostream& operator<<(std::ostream& os, const Color& c);
+	friend bool operator ==(const Color& lhs, const Color& rhs) {
+		return (lhs.r == rhs.r) && (lhs.g == rhs.g) && (lhs.b == rhs.b);
+	}
+
+	inline friend std::ostream& operator<<(std::ostream& os, const Color& c);
 
 	// Modulate
 	Color modulate(const Color& rhs) const {

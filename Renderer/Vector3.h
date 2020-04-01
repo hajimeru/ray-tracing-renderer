@@ -81,6 +81,9 @@ public:
 		return ret /= value;
 	}
 
+	inline friend bool operator==(const Vector3& lhs, const Vector3& rhs) {
+		return (lhs.x_ == rhs.x_) && (lhs.y_ == rhs.y_) && (lhs.z_ == rhs.z_);
+	}
 
 	//cross
 	Vector3 Cross(const Vector3& rhs) const {
