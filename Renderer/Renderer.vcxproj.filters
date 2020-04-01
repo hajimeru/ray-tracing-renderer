@@ -12,26 +12,26 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="source">
+    <Filter Include="image">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="test">
+    <Filter Include="source">
       <UniqueIdentifier>{3405cb03-c8a7-4381-9dcf-8cb7d75be0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{e8e5efcc-1b33-4f82-8947-5bab4eec2a9a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tgaimage.cpp">
-      <Filter>source</Filter>
+      <Filter>image</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>test</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tgaimage.h">
-      <Filter>render</Filter>
-    </ClInclude>
     <ClInclude Include="Vector3.h">
       <Filter>render</Filter>
     </ClInclude>
@@ -66,6 +66,21 @@
       <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="PhongMaterial.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="UnionGeometry.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="tgaimage.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="Local_illumination.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
       <Filter>render</Filter>
     </ClInclude>
   </ItemGroup>

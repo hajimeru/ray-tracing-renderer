@@ -151,22 +151,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="tgaimage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CheckerMaterial.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Geometry.h" />
+    <ClInclude Include="Local_illumination.h" />
     <ClInclude Include="IntersectResult.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="MyConst.h" />
     <ClInclude Include="MyMath.h" />
     <ClInclude Include="PerspectiveCamera.h" />
     <ClInclude Include="PhongMaterial.h" />
+    <ClInclude Include="Plane.h" />
     <ClInclude Include="Ray3.h" />
+    <ClInclude Include="Render.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="tgaimage.h" />
+    <ClInclude Include="UnionGeometry.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
