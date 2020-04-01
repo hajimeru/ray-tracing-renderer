@@ -184,9 +184,5 @@ void RayTraceReflection() {
 	image.write_tga_file(IMAGE_URL);
 }
 
-
-
-
-
 #endif // _LOCAL_ILLUMINATION_H_
 
