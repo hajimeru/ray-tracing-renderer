@@ -1,14 +1,16 @@
 #ifndef _INTERSECT_RESULT_H_
 #define _INTERSECT_RESULT_H_
 
+#include <limits>
 #include "Vector3.h"
+
 class Geometry;
 
 class IntersectResult {
 public:
 	IntersectResult()
 		: geometry_(nullptr),
-		distance_(0),
+		distance_(std::numeric_limits<double>::max()),
 		position_(Vector3::Zero),
 		normal_(Vector3::Zero)
 	{ }
