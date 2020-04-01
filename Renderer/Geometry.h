@@ -2,8 +2,9 @@
 #define _GEOMETRY_H_
 
 #include "IntersectResult.h"
-#include "Ray3.h"
 #include "Material.h"
+#include "Ray3.h"
+
 
 class Geometry {
 public:
