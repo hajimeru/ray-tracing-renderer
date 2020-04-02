@@ -170,6 +170,7 @@
     <ClInclude Include="PerspectiveCamera.h" />
     <ClInclude Include="PhongMaterial.h" />
     <ClInclude Include="Plane.h" />
+    <ClInclude Include="PointLight.h" />
     <ClInclude Include="Ray3.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="Sphere.h" />

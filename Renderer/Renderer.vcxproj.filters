@@ -95,5 +95,8 @@
     <ClInclude Include="LightTest.h">
       <Filter>test</Filter>
     </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>render</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
