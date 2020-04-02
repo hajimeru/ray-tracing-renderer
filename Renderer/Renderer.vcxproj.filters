@@ -98,5 +98,8 @@
     <ClInclude Include="PointLight.h">
       <Filter>render</Filter>
     </ClInclude>
+    <ClInclude Include="SpotLight.h">
+      <Filter>render</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
