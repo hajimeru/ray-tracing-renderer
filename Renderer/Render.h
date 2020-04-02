@@ -9,16 +9,13 @@
 #include "Color.h"
 #include "Geometry.h"
 
-using uint8 = unsigned char;
-using uint16 = unsigned short;
-using uint32 = unsigned int;
-using uint64 = unsigned long long;
+
 using std::shared_ptr;
 
 class Render
 {
 public:
-	static uint8** rayTrace(const shared_ptr<Geometry>& scene,  const PerspectiveCamera& camera, int maxReflect, const uint32 WIDTH, const uint32 HEIGHT);
+	static void rayTrace(const shared_ptr<Geometry>& scene,  const PerspectiveCamera& camera, int maxReflect, const uint32 WIDTH, const uint32 HEIGHT);
 public:
 	static Color RayTraceRecursive(const shared_ptr<Geometry>& scene ,const Ray3 &ray, int maxReflect);
 };

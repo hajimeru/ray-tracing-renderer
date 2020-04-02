@@ -101,5 +101,8 @@
     <ClInclude Include="SpotLight.h">
       <Filter>render</Filter>
     </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

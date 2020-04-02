@@ -11,8 +11,8 @@ public:
 
 	static const LightSample Zero;
 
-	const Vector3& L() { return l_; }
-	const Color& EL() { return el_; }
+	const Vector3& L() const{ return l_; }
+	const Color& EL() const { return el_; }
 
 	friend bool operator!=(const LightSample& lhs, const LightSample& rhs) {
 		return !((lhs.l_ == rhs.l_) && (lhs.el_ == rhs.el_));

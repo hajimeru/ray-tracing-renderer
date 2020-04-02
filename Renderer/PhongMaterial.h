@@ -11,9 +11,8 @@ public:
 		specular_(specular)
 	{ }
 
-	Color Sample(const Ray3& ray, const Vector3& position, const Vector3& normal) override {
-		Vector3 lightDir = Vector3(1,1,1).Normalize();
-		Color lightColor = Color::WHITE;
+	Color Sample(const Ray3& ray, const LightSample& lightSample, const Vector3& position, const Vector3& normal) override {
+		Vector3 lightDir = lightSample.L();
 
 		double NdotL = normal.Dot(lightDir);
 		Vector3 H = (lightDir - ray.getDirection()).Normalize();
@@ -22,10 +21,7 @@ public:
 		Color diffuseTerm = diffuse_ * std::max(NdotL, 0.0);
 		Color specularTerm = specular_ * std::pow(std::max(NdotH, 0.0), shininess_);
 		Color res = diffuseTerm + specularTerm;
-		if (res.r > 1) res.r = 1;
-		if (res.g > 1) res.g = 1;
-		if (res.b > 1) res.b = 1;
-		return lightColor.modulate(res);
+		return lightSample.EL().modulate(res);
 	}
 
 private:
