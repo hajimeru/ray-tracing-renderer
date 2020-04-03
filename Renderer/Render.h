@@ -53,7 +53,7 @@ Color Render::RayTraceRecursive(const shared_ptr<Geometry>& scene, const vector<
 
 void Render::RayTrace(const shared_ptr<Geometry>& scene, const vector<shared_ptr<Light>>& lights, const PerspectiveCamera & camera, int maxReflect, const int WIDTH, const int HEIGHT, TGAImage& image)
 {
-
+	#pragma omp parallel for
 	for (int x = 0; x < WIDTH; ++x) {
 		double sx = x / (double)WIDTH;
 		for (int y = 0; y < HEIGHT; ++y) {

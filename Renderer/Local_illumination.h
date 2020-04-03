@@ -143,33 +143,52 @@ void MoreAndMoreLight() {
 	TGAImage image(WIDTH, HEIGHT, TGAImage::RGB);
 
 	//Camera
-	Vector3 eye(0, 0.5, 3);
-	Vector3 front(0, 0, -1);
+	Vector3 eye(0, 0, -3);
+	Vector3 front(0, 0, 1);
 	Vector3 up(0, 1, 0);
 	PerspectiveCamera camera(eye, front, up, 90, W_DIVIDE_H);
 
 
 	// Two spheres
-	auto sphere1 = make_shared<Sphere>(Vector3(-1, 1, 0), 1);
-	auto sphere2 = make_shared<Sphere>(Vector3(1, 1, 0), 1);
+	auto sphere1 = make_shared<Sphere>(Vector3(-1, 0, 0), 1);
+	auto sphere2 = make_shared<Sphere>(Vector3(1, 0, 0), 1);
 
-	sphere1->setMaterial(make_shared<PhongMaterial>(Color(1, 0, 0), Color::WHITE, 10, 0.25));
-	sphere2->setMaterial(make_shared<PhongMaterial>(Color(0.5, 0.5, 0.5), Color::WHITE, 16, 0.25));
+	sphere1->setMaterial(make_shared<PhongMaterial>(Color(1, 0, 0), Color::WHITE, 10, 1));
+	sphere2->setMaterial(make_shared<PhongMaterial>(Color(0.5, 0.5, 0.5), Color::WHITE, 16, 1));
 
 	//plane
-	auto plane1 = make_shared<Plane>(Vector3(0, 1, 0), 0);
-	plane1->setMaterial(make_shared<PhongMaterial>(Color(1, 1, 1), Color::WHITE, 10, 0.25));
+	//left
+	auto plane1 = make_shared<Plane>(Vector3(1, 0, 0), -4);
+	//right
+	auto plane2 = make_shared<Plane>(Vector3(-1, 0, 0), -4);
+	//up
+	auto plane3 = make_shared<Plane>(Vector3(0, -1, 0), -4);
+	//down
+	auto plane4 = make_shared<Plane>(Vector3(0, 1, 0), -1);
+	//back
+	auto plane5 = make_shared<Plane>(Vector3(0, 0, -1), -2);
 
-	shared_ptr<Geometry> scene = make_shared<UnionGeometry>(vector<shared_ptr<Geometry>>({ plane1, sphere1, sphere2 }));
+	plane1->setMaterial(make_shared<PhongMaterial>(Color(0.5, 0, 0), Color::WHITE, 10, 0.25));
+	plane2->setMaterial(make_shared<PhongMaterial>(Color(0, 0, 0.5), Color::WHITE, 10, 0.25));
+	plane3->setMaterial(make_shared<PhongMaterial>(Color(0, 0.5, 0), Color::WHITE, 10, 0.25));
+	plane4->setMaterial(make_shared<PhongMaterial>(Color(0, 0.5, 0.5), Color::WHITE, 10, 0.25));
+	plane5->setMaterial(make_shared<PhongMaterial>(Color(0.5, 0.5, 0), Color::WHITE, 10, 0.25));
 
-	//light1
-	auto light1 = make_shared<SpotLight>(Color(1, 1, 1) * 5, Vector3(1, 3, 3), Vector3(0, -1, -1), 10, 60, 2, true);
-	auto light2 = make_shared<SpotLight>(Color(1, 1, 1) * 5, Vector3(0, 3, 3), Vector3(0, -1, -1), 10, 60, 2, true);
-	auto light3 = make_shared<SpotLight>(Color(1, 1, 1) * 5, Vector3(-1, 3, 3), Vector3(0, -1, -1), 10, 60, 2, true);
+	shared_ptr<Geometry> scene = make_shared<UnionGeometry>(vector<shared_ptr<Geometry>>({ plane1, plane2,plane3,plane4,plane5,sphere1, sphere2 }));
 
+	vector<shared_ptr<Light>> lights{};
+	//light
+	for (int x = -1; x <= 1; x ++) {
+		for (int z = -1; z <= 1; z ++) {
+			auto light = make_shared<PointLight>(Color(1, 1, 1)* 0.5, Vector3(x, 3, z), true);
+			lights.push_back(light);
+		}
+	}
+	auto light = make_shared<DirectionalLight>(Color(1, 1, 1) * 0.5, Vector3(1, -1, 1), false);
+	lights.push_back(light);
 
-	vector<shared_ptr<Light>> lights{ light1,light2,light3 };
-	Render::RayTrace(scene, lights, camera, 10, WIDTH, HEIGHT, image);
+	
+	Render::RayTrace(scene, lights, camera, 3, WIDTH, HEIGHT, image);
 
 	image.flip_vertically();
 	image.write_tga_file(IMAGE_URL);
