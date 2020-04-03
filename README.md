@@ -37,5 +37,5 @@ A renderer based on ray tracing by C++
 
 8. 多个点光源测试
 
-![MoreAndMoreLight](picture/MoreAndMoreLight.png)
+<img src="picture/MoreAndMoreLight1.png" alt="MoreAndMoreLight1" style="zoom: 33%;" />
 
