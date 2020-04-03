@@ -16,7 +16,7 @@ public:
 		fovScaleH_ = fovScaleV_ * w_divide_h;
 	}
 
-	Ray3 generateRay(double x, double y) {
+	Ray3 generateRay(double x, double y) const {
 		Vector3 r = right_ * fovScaleH_ * (x - 0.5);
 		Vector3 u = up_ * fovScaleV_ * (y - 0.5);
 

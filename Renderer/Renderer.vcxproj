@@ -165,7 +165,6 @@
     <ClInclude Include="Local_illumination.h" />
     <ClInclude Include="IntersectResult.h" />
     <ClInclude Include="Material.h" />
-    <ClInclude Include="Matrix.h" />
     <ClInclude Include="MyConst.h" />
     <ClInclude Include="MyMath.h" />
     <ClInclude Include="PerspectiveCamera.h" />
