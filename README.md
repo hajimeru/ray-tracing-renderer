@@ -1,7 +1,7 @@
 # ray-tracing-renderer
 A renderer based on ray tracing by C++
 
-![MaterialAndLightTest](picture/MaterialAndLightTest.png)
+<img src="picture/MoreAndMoreLight1.png" alt="MoreAndMoreLight1" style="zoom: 33%;" />
 
 这是一个用C++语言编写的，基于ray-trace的渲染器
 
